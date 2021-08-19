@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project_transfers_bank/models/transfer.dart';
 import 'package:project_transfers_bank/screens/transfers/forms.dart';
 
+const _titleAppBar = 'BankApp';
 
 class TransfersScreen extends StatefulWidget {
   final List<Transfers> _transfers = [];
@@ -15,7 +16,7 @@ class _TransfersScreenState extends State<TransfersScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BankApp'),
+        title: Text(_titleAppBar),
       ),
       body: ListView.builder(
         itemCount: widget._transfers.length,

@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:project_transfers_bank/components/editor_form.dart';
 import 'package:project_transfers_bank/models/transfer.dart';
 
+const _titleAppBar = 'Transferências';
+const _descriptionLabelValue = 'Valor';
+const _descriptionButton = 'Confirmar';
+const _clueFieldValue = '0.00';
+const _clueFieldNumberAccount = '0000';
+const _descriptionLabelNumberAccount = 'Digite o número da conta';
+
 class TransfersFormScreen extends StatelessWidget {
   final TextEditingController _controllerFieldNumberAccount =
   TextEditingController();
@@ -11,23 +18,23 @@ class TransfersFormScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Transferências'),
+        title: Text(_titleAppBar),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             EditorForm(
-                clue: '0000',
+                clue: _clueFieldNumberAccount,
                 controller: _controllerFieldNumberAccount,
-                descriptionLabel: 'Digite o número da conta'),
+                descriptionLabel: _descriptionLabelNumberAccount),
             EditorForm(
-                clue: '0.00',
+                clue: _clueFieldValue,
                 controller: _controllerFieldValue,
                 icon: Icons.monetization_on,
-                descriptionLabel: 'Valor'),
+                descriptionLabel: _descriptionLabelValue),
             ElevatedButton(
               onPressed: () => createTransfer(context),
-              child: Text('Confirmar'),
+              child: Text(_descriptionButton),
             ),
           ],
         ),
