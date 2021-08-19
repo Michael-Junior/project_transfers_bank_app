@@ -13,12 +13,3 @@ class BankApp extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
-

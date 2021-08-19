@@ -6,7 +6,12 @@ class EditorForm extends StatelessWidget {
   final TextEditingController? controller;
   final String? clue;
 
-  EditorForm({this.icon, this.descriptionLabel, this.controller, this.clue});
+  EditorForm({
+    this.icon,
+    this.descriptionLabel,
+    this.controller,
+    this.clue,
+  });
 
   @override
   Widget build(BuildContext context) {
