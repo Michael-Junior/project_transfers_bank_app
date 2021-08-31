@@ -5,7 +5,6 @@ import 'package:project_transfers_bank/models/transfer.dart';
 const _titleAppBar = 'Transferências';
 const _descriptionLabelValue = 'Valor';
 const _descriptionButton = 'Confirmar';
-const _clueFieldValue = '0.00';
 const _clueFieldNumberAccount = '0000';
 const _descriptionLabelNumberAccount = 'Digite o número da conta';
 
@@ -28,7 +27,6 @@ class TransfersFormScreen extends StatelessWidget {
                 controller: _controllerFieldNumberAccount,
                 descriptionLabel: _descriptionLabelNumberAccount),
             EditorForm(
-                clue: _clueFieldValue,
                 controller: _controllerFieldValue,
                 icon: Icons.monetization_on,
                 descriptionLabel: _descriptionLabelValue),

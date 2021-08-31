@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:project_transfers_bank/screens/transfers/transfers.dart';
 
-void main() => runApp(BankApp());
+void main() => runApp(TransferBank());
 
-class BankApp extends StatelessWidget {
+class TransferBank extends StatelessWidget {
+
+  static const String _title = 'Flutter Code Sample';
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark(),
-      debugShowCheckedModeBanner: false,
-      home: TransfersScreen(),
+      title: _title,
+      home: Scaffold(
+        body: Center(
+          child: TransfersScreen(),
+        ),
+      ),
     );
   }
 }
