@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_transfers_bank/screens/widgets/text_input.dart';
 
 class EditorForm extends StatelessWidget {
   final IconData? icon;
@@ -18,6 +19,7 @@ class EditorForm extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(15.0),
       child: TextField(
+        inputFormatters: icon != null ? [TextInputFormatterBank.currency()] : null,
         style: TextStyle(fontSize: 24),
         controller: controller,
         keyboardType: TextInputType.number,
